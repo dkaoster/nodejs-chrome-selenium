@@ -1,5 +1,6 @@
 FROM debian
 
+# Update Debian and install required dependencies
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get install -y --no-install-recommends wget gnupg curl ca-certificates bzip2 git lsof libncurses5

@@ -2,15 +2,16 @@ name: Docker Hub
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    # Run every Sunday at 00:00
+    - cron: "0 0 * * 0"
 
 jobs:
-  trigger:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@master
-      - name: Build
+      - name: Build and Publish Docker Image
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: dkaoster/nodejs-chrome-selenium

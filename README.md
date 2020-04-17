@@ -1,5 +1,7 @@
 # Docker Image for Functional Testing
 
+![Docker Hub Build](https://github.com/dkaoster/nodejs-chrome-selenium/workflows/Docker%20Hub%20Build/badge.svg)
+
 This [Docker Image](https://hub.docker.com/r/dkaoster/nodejs-chrome-selenium) contains the following:
 
 - Debian base
