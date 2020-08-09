@@ -14,7 +14,12 @@ RUN apt-get install -y --no-install-recommends google-chrome-stable
 # Install Openjdk 8
 RUN sh -c 'echo "deb http://ftp.us.debian.org/debian sid main" >> /etc/apt/sources.list'
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends openjdk-8-jdk python2.7
+RUN apt-get install -y --no-install-recommends openjdk-8-jdk
+
+# Install python2
+RUN add-apt-repository universe
+RUN apt-get update
+RUN apt-get install python2
 
 # Install nodejs
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
