@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:stretch
 
 # Update Debian and install required dependencies
 RUN apt-get update
@@ -12,7 +12,7 @@ RUN apt-get update
 RUN apt-get install -y --no-install-recommends google-chrome-stable
 
 # Install Openjdk 8
-RUN sh -c 'echo "deb http://ftp.us.debian.org/debian buster main" >> /etc/apt/sources.list'
+RUN sh -c 'echo "deb http://ftp.us.debian.org/debian stretch main" >> /etc/apt/sources.list'
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends openjdk-8-jdk
 
