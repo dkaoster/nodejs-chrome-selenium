@@ -17,7 +17,7 @@ RUN apt-get update
 RUN apt-get install -y --no-install-recommends openjdk-8-jdk
 
 # Install python2
-RUN add-apt-repository universe
+RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
 RUN apt-get update
 RUN apt-get install python2
 
