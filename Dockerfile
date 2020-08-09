@@ -18,4 +18,4 @@ RUN apt-get install -y --no-install-recommends openjdk-8-jdk
 
 # Install nodejs
 RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
-RUN apt-get install -y --no-install-recommends nodejs
+RUN apt-get install -y --no-install-recommends python-minimal nodejs
