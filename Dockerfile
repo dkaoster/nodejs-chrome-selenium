@@ -16,6 +16,9 @@ RUN sh -c 'echo "deb http://ftp.us.debian.org/debian stretch main" >> /etc/apt/s
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends openjdk-8-jdk
 
+# Install Python dev and build-essentials
+RUN apt-get install -y --no-install-recommends build-essential python-dev
+
 # Install nodejs
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y --no-install-recommends nodejs
