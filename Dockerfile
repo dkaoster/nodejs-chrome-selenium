@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:stable
 
 # Update Debian and install required dependencies
 RUN apt-get update
